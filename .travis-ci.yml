@@ -1,0 +1,6 @@
+language: rust
+before_script:
+  - cargo install --git https://github.com/abissens/elepages.git --branch main
+
+script:
+  - elepages --source ./pages --handlebars https://github.com/abissens/blog-template.git -vvv
