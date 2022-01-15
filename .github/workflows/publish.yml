@@ -1,0 +1,17 @@
+name: publish
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '16'
+      - run: cargo install --git https://github.com/abissens/elepages.git --branch main
+      - run: elepages --source ./pages --handlebars https://github.com/abissens/blog-template.git -vvv
