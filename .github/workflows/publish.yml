@@ -14,7 +14,7 @@ jobs:
         with:
           node-version: '16'
       - run: cargo install --git https://github.com/abissens/elepages.git --branch main
-      - run: elepages --source ./pages --handlebars https://github.com/abissens/blog-template.git -vvv
+      - run: elepages --destination ./docs --source ./pages --handlebars https://github.com/abissens/blog-template.git -vvv
       - run: |
           git config user.name github-actions
           git config user.email github-actions@github.com
