@@ -13,6 +13,15 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           node-version: '16'
+      - uses: actions/cache@v2
+        with:
+          path: |
+            ~/.cargo/bin/
+            ~/.cargo/registry/index/
+            ~/.cargo/registry/cache/
+            ~/.cargo/git/db/
+            target/
+          key: ${{ runner.os }}-cargo-${{ hashFiles('**/Cargo.lock') }}
       - run: cargo install --git https://github.com/abissens/elepages.git --branch main
       - run: elepages --destination ./docs --source ./pages --handlebars https://github.com/abissens/blog-template.git -vvv
       - run: |
