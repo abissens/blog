@@ -22,7 +22,7 @@ jobs:
             ~/.cargo/git/db/
             target/
           key: ${{ runner.os }}-cargo-${{ hashFiles('**/Cargo.lock') }}
-      - run: cargo install --git https://github.com/abissens/elepages.git --branch main
+      - run: cargo install --force --git https://github.com/abissens/elepages.git --branch main
       - run: elepages --destination ./docs --source ./pages --handlebars https://github.com/abissens/blog-template.git -vvv
       - run: |
           git config user.name github-actions
