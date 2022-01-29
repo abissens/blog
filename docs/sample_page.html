@@ -6,14 +6,19 @@
 <head>
     <title>    Donec diam lacus
 </title>
+    <script type="text/javascript">
+        window.BASE_URI = "/blog";
+        const isDarkMode = localStorage.getItem('isDarkMode');
+        if(isDarkMode) {
+            document.documentElement.setAttribute('data-theme', 'dark');
+        }
+    </script>
+
     <link rel="icon" type="image/png" sizes="32x32" href="/blog/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/blog/favicon/favicon-16x16.png">
     <link rel="mask-icon" href="/blog/safari-pinned-tab.svg" color="#5bbad5">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
-    <script type="text/javascript">
-        window.BASE_URI = "/blog";
-    </script>
     <script src="/blog/common.js"></script>
         <script src="/blog/page.js"></script>
 </head>
@@ -32,6 +37,7 @@
             <div class="header-menu">
                 <a href="/blog/archive/" >archive</a>
                 <a href="/blog/about" >about</a>
+                <button class="dark-light-mode" id="dark-light-mode" title="dark/light mode" ></button>
             </div>
         </div>
         <div class="inner-content">
@@ -52,7 +58,7 @@
         </div>
     </div>
     <div class="page-content">
-        <h2>Lorem ipsum dolor sit amet</h2>
+        <h2>Lorem ipsum dolor sit amet - sample</h2>
 <h3>consectetur adipiscing elit</h3>
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas tempor nulla a nunc semper, ac mollis lacus egestas. Vivamus porttitor quam nec tellus volutpat, eu facilisis nisl tempus. Nulla aliquam blandit lorem sit amet venenatis. Nullam eu purus nec nisl fermentum sagittis ac a augue. Proin vestibulum sem eget mattis hendrerit. Etiam euismod lectus sit amet dolor fringilla interdum. Nunc convallis ultricies ex in faucibus.</p>
 <p>Fusce erat diam, vehicula eu ipsum quis, pulvinar porttitor orci. Ut pulvinar ut augue feugiat facilisis. Sed sed sollicitudin orci. Mauris consequat eleifend est nec sagittis. Etiam sed lorem ligula. Curabitur fringilla ligula eget pulvinar congue. In hac habitasse platea dictumst. Nunc non maximus quam. Sed congue ex sed laoreet mattis. Curabitur aliquam nisi et sapien porttitor, sit amet sodales mi molestie.</p>
