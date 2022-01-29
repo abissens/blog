@@ -1,4 +1,4 @@
-## Lorem ipsum dolor sit amet
+## Lorem ipsum dolor sit amet - sample
 
 ### consectetur adipiscing elit
 
